@@ -1,4 +1,5 @@
 #include "Parser.h"
+#include "classes/HandleVariables.h"
 #include <iostream>
 
 int main(){
@@ -6,6 +7,8 @@ int main(){
         std::string expression;
         std::cout << "Enter an expression: ";
         std::getline(std::cin, expression);
+
+        HandleVariables::process(expression);
 
         try {
             INode* root = Parser::parse(expression);

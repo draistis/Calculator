@@ -1,4 +1,5 @@
 #include "Parser.h"
+#include "classes/HandleVariables.cpp"
 
 INode* Parser::parse(const std::string& expression) {
     size_t index = 0;
@@ -71,6 +72,14 @@ INode* Parser::parseNumber(const std::string& expression, size_t& index) {
             value += fraction * (expression[index] - '0');
             index++;
         }
+    }
+    if (isalpha(expression[index])) {
+        std::string variable;
+        while (index < expression.length() && isalpha(expression[index])) {
+            variable += expression[index];
+            index++;
+        }
+        value = HandleVariables::getVariable(variable);
     }
     return new Value(value);
 }
