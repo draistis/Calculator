@@ -10,10 +10,14 @@ add_executable(Calculator
     src/classes/Subtract.cpp
     src/classes/Divide.cpp
     src/classes/Multiply.cpp
-    src/classes/Sum.cpp)
+    src/classes/Sum.cpp
+    src/classes/HandleVariables.cpp)
 
 include(CTest)
 enable_testing()
+
+#add_subdirectory(src)
+add_subdirectory(tests)
 
 # include(FetchContent)
 # FetchContent_Declare(
