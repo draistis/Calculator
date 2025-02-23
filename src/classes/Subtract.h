@@ -8,7 +8,7 @@ private:
     INode* left;
     INode* right;
 
-private:
+public:
     Subtract(INode* left, INode* right);
     double calc() const override;
     void print() const override;
