@@ -8,9 +8,9 @@ double Sum::calc() const {
 }
 
 void Sum::print() const {
-    std::cout << "(";
+    //std::cout << "(";
     left->print();
     std::cout << " + ";
     right->print();
-    std::cout << ")";
+    //std::cout << ")";
 }
