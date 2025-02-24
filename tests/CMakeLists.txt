@@ -10,15 +10,11 @@ set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
 add_executable(CalculatorTest
-    ../src/Parser.cpp
-    ../src/classes/Subtract.cpp
-    ../src/classes/Divide.cpp
-    ../src/classes/Multiply.cpp
-    ../src/classes/Sum.cpp
-    ../src/classes/HandleVariables.cpp
     CalculatorTest.cpp
+    ../src/classes/Sum.cpp
+    ../src/classes/Multiply.cpp
 )
 
 target_link_libraries(CalculatorTest gtest_main)
 
-add_test(NAME CalculatorTest COMMAND CalculatorTest)
+add_test(NAME calc_gtest COMMAND CalculatorTest)

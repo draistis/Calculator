@@ -1,5 +1,5 @@
 #include "Parser.h"
-#include "classes/HandleVariables.cpp"
+#include "classes/HandleVariables.h"
 
 INode* Parser::parse(const std::string& expression) {
     size_t index = 0;
